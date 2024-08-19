@@ -11,18 +11,6 @@ const db = require('./modules/db');
 
 app.use(cors());
 
-app.use((req, res, next) => {
-    const allowedOrigins = [
-        //vercel url //production
-        'http://localhost:5173' //development local url
-    ];
-
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        
-    }
-})
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -36,7 +24,10 @@ app.get("/projects", async (req,res) => {
     res.json(projectList);
 });
 
-app.listen(port, () => {
-    console.log(`Listening on ${port}`);
-})
+//local testing for getting the api data
+//SKILLS => localhost:7777/api/skills
+//PROJECTS => localhost7777/api/projects
+/* app.listen(port, () => {
+    console.log(`Listening on http://localhost:${port}`);
+}) */
 
