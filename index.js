@@ -12,7 +12,8 @@ const db = require('./modules/db');
 // CORS enabling
 app.use((req, res, next) => {
   const allowedOrigins = [
-    'https://portfolio-navy-ten-74.vercel.app', // Production url
+    'https://www.touf.me',
+    'portfolio-georgios-toufexis-projects.vercel.app', // Production url
     'http://localhost:7777'                     // Development url
   ];
 
