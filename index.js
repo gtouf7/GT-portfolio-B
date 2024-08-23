@@ -12,8 +12,9 @@ const db = require('./modules/db');
 // CORS enabling
 app.use((req, res, next) => {
   const allowedOrigins = [
+    'https://touf.me', //new Production url
     'gt-portfolio-b.vercel.app', // Production url
-    'http://localhost:7777'                     // Development url
+    'http://localhost:7777' // Development url
   ];
 
   const origin = req.headers.origin;
